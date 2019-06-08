@@ -14,7 +14,9 @@ const plugins = [
   }),
   nodeResolve(),
   commonjs(),
-  terser(),
+  terser({
+    keep_fnames: true,
+  }),
 ]
 
 const configs = globby.sync('src/*.js').map(inputFile => ({
