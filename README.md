@@ -17,4 +17,6 @@ import listify from '@scriptless/util/listify'
 const myList = ['foo', 'bar', 'baz']
 
 console.log(listify(myList))
+
+// >  foo, bar, and baz
 ```
