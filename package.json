@@ -1,0 +1,24 @@
+{
+  "name": "@scriptless/util",
+  "description": "Javascript utility functions.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Gus Nordhielm",
+  "main": "public/index.cjs.js",
+  "module": "public/index.esm.js",
+  "scripts": {
+    "start": "rollup -cw",
+    "build": "rollup -c",
+    "test": "jest --passWithNoTests",
+    "test:watch": "npm test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gnordhielm/scriptless.util.git"
+  },
+  "dependencies": {},
+  "keywords": [
+    "utility",
+    "helpers"
+  ]
+}
