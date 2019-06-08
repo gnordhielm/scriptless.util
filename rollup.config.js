@@ -1,13 +1,14 @@
-import globby from 'globby'
 import babel from 'rollup-plugin-babel'
 import commonjs from 'rollup-plugin-commonjs'
 import nodeResolve from 'rollup-plugin-node-resolve'
+import multiEntry from 'rollup-plugin-multi-entry'
 import { terser } from 'rollup-plugin-terser'
 import pkg from './package.json'
 
 const external = [...Object.keys(pkg.peerDependencies || {})]
 
 const plugins = [
+  multiEntry(),
   babel({
     runtimeHelpers: true,
     plugins: ['@babel/transform-runtime'],
@@ -19,14 +20,12 @@ const plugins = [
   }),
 ]
 
-const configs = globby.sync('src/*.js').map(inputFile => ({
-  input: inputFile,
+module.exports = {
+  input: 'src/*.js',
   output: {
-    file: inputFile.replace('src', 'public'),
+    file: pkg.main,
     format: 'cjs',
   },
   external,
   plugins,
-}))
-
-module.exports = configs
+}

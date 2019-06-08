@@ -1,4 +1,4 @@
-import makeClassName from '../src/makeClassName'
+import { makeClassName } from '../src/makeClassName'
 
 test('handles empty case', () => {
   const result = makeClassName()

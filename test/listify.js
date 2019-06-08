@@ -1,4 +1,4 @@
-import listify from '../src/listify'
+import { listify } from '../src/listify'
 
 test('handles empty case', () => {
   const result = listify()

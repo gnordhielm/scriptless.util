@@ -12,7 +12,7 @@ Install with `npm install @scriptless/util`.
 Import any function you'd like to use with a full path.
 
 ```js
-import listify from '@scriptless/util/listify'
+import { listify } from '@scriptless/util'
 
 const myList = ['foo', 'bar', 'baz']
 

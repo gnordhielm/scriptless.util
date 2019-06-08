@@ -1,5 +1,5 @@
 // given an array of strings, return a plain-english list
-function listify(array = []) {
+export function listify(array = []) {
   switch (array.length) {
     case 0:
       return ''
@@ -13,5 +13,3 @@ function listify(array = []) {
       )}`
   }
 }
-
-export default listify
