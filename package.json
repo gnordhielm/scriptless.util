@@ -1,7 +1,7 @@
 {
   "name": "@scriptless/util",
   "description": "JavaScript utility functions.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "author": "Gus Nordhielm",
   "main": "public/index.js",
