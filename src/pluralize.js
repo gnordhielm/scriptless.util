@@ -1,4 +1,4 @@
-export default function pluralize() {
+export function pluralize() {
   const argument = arguments[0]
 
   if (!argument) return ''
